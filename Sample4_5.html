@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/spin.min.js"></script>
+<script type="text/javascript" src="lib/ladda.min.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/angular-route.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="lib/angular-resource.js"></script>
+<script type="text/javascript" src="lib/jcs-auto-validate.js"></script>
+<script type="text/javascript" src="lib/jcs-auto-validate.min.js"></script>
+</head>
+<body ng-app="DemoApp" ng-controller="DemoController">
+	<div class="form-group">
+		<form name="myForm" novalidate="novalidate" ng-submit="submit()">
+			<div class="form-group">
+				<button class="btn btn-primary" type="submit"  ladda="submitting" name="sbutton" data-style="expand-right">Submit</button>
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+	// chua xong
+		var app = angular.module("DemoApp", [ 'jcs-autoValidate', 'angular-ladda']);
+		app.controller("DemoController", function($scope) {
+			$scope.submitting = false;
+			$scope.submit = function() {
+				$scope.submitting = true;
+			}
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+/**
+** Installation via npm:
+** npm install http-server -g
+** http-server -o
+**
+** cài đặt Karma framework unit testing  // bỏ ko cài vì chẳng hiểu gì :)))
+** npm install karma karma-chrome-launcher karma-jasmine
+** npm install karma-cli
+**
+** # npm serveのインストール
+** $ npm install -g serve
+** # 実行
+** $ serve
+**/
+
+
+Sample1_0=Hello world, AngularJS
+Sample1_1=How to build a basic Controller/How to define Methods in Controller
+Sample1_2=
+Sample1_3=Setting up or adding Behavior
+Sample1_4=AngularJS ng-repeat Directive with Example
+Sample1_5=Angularjs Multiple Controllers
+Sample1_6=
+Sample1_7=
+Sample1_8=
+Sample1_9=
+Sample2_0=
+Sample2_1=
+Sample2_2=
+Sample2_3=
+Sample2_4=
+Sample2_5=
+Sample2_6=
+Sample2_7=
+Sample2_8=
+Sample2_9=
+Sample3_0=
+Sample3_1=
+Sample3_2=
+Sample3_3=
+Sample3_4=
+Sample3_5=
+Sample3_6=
+Sample3_7=
+Sample3_8=Accessing parameters from the route
+Sample3_9=Using Angular $route service
+Sample4_0=Enabling HTML5 Routing
+Sample4_1=Populate & Display Data in a Table
+Sample4_2=Form validation using HTML5
+Sample4_3=Form validation using $dirty, $valid, $invalid, $pristine
+Sample4_4=Form validation using AngularJS Auto Validate
+Sample4_5=User feedbacks with Ladda buttons
+Sample4_6=How to Submit a form using ng-submit
+Sample4_7=Client Side includes
+Sample4_8=How to include HTML file in AngularJS
+Sample4_9=Which Component can be Injected as a Dependency In AngularJS (Value component)
+Sample5_0=Which Component can be Injected as a Dependency In AngularJS (Service)

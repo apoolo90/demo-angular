@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div ng-app="demoApp" ng-controller="sumController">
+		{{value}}
+	</div>
+	<script type="text/javascript">
+	var app = angular.module("demoApp", []);
+	app.controller("sumController", function($scope) {
+		$scope.a = 1;
+		$scope.b = 2;
+		$scope.value  = $scope.$eval('a+b');
+	})
+	</script>
+</body>
+</html>

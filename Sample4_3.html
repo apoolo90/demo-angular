@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/angular-route.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="lib/angular-resource.js"></script>
+<style>
+table, th, td {
+	border: 1px solid gray;
+	padding: 5px;
+}
+</style>
+</head>
+<body ng-app="DemoApp" ng-controller="DemoController">
+	<form name="myForm" novalidate="novalidate">
+		enter your name : <input type="text" name="user" ng-model="user"  required="required"> 
+		<span style="color: red"	ng-show="myForm.user.$dirty && myForm.user.$invalid"> 
+		  <span ng-show="myForm.user.$error.required">username is required</span>
+		</span>
+		<p>
+			<input type="submit"
+				ng-disabled="myForm.user.$dirty && myForm.user.$invalid">
+		</p>
+	</form>
+	<script type="text/javascript">
+	//$dirty – The user has interacted with the control
+	//$valid – The field content is valid
+	//$invalid – The field content is invalid
+	//$pristine – The user has not interacted with the control as yet
+		var app = angular.module("DemoApp", []);
+		app.controller("DemoController", function($scope) {
+			$scope.user = "Angular";
+		})
+	</script>
+</body>
+</html>

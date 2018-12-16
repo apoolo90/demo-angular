@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+
+	<div ng-app="DemoApp" ng-controller="DemoController">
+			<div ng-controller="DemoController2">
+			{{lname}}
+		</div>
+	</div>
+	<script>
+	var app = angular.module('DemoApp',[]);
+
+		app.controller('DemoController', function($scope) {
+			$scope.pname = "1";
+		});
+		app.controller('DemoController2', function($scope){
+			$scope.lname = "2";
+			});
+	</script>
+</body>
+</html>

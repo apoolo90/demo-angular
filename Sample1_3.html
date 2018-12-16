@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body ng-app="DemoApp">
+	<script type="text/javascript" src="lib/angular.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+	
+	<div ng-controller="DemoController">
+		{{fullName("long","1990")}}
+	</div>
+	<script type="text/javascript">
+		var app = angular.module('DemoApp', []);
+		
+		app.controller("DemoController", function($scope) {
+			$scope.fullName = function(firstName, age) {
+				return firstName + age;
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/angular-route.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+</head>
+<body ng-app="DemoApp">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>angular js topics</th>
+				<th>Description</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>1</td>
+				<td>Controllers</td>
+				<td><a href="AngularRoute/1">Topics details</a></td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>2</td>
+				<td>Controllers</td>
+				<td><a href="AngularRoute/2">Topics details</a></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>3</td>
+				<td>Controllers</td>
+				<td><a href="AngularRoute/3">Topics details</a></td>
+			</tr>
+		</tbody>
+	</table>
+	<div ng-view></div>
+	<script type="text/javascript">
+		var app = angular.module('DemoApp', [ "ngRoute" ]);
+		app.constant("baseUrl", "http://127.0.0.1:8080/Sample3_9.html/AngularRoute");
+		app.config(function($routeProvider, $locationProvider) {
+			$routeProvider.when('/AngularRoute/:topicId', {
+				mytext : "this is text",
+				templateUrl : 'AngularRoute.html',
+				controller : 'AngularController'
+			})
+			$locationProvider.html5Mode(true);
+		});
+		app.controller('AngularController',function($scope,$routeParams,$route) {
+	        $scope.tutorialid=$routeParams.topicId;
+	        $scope.text = $route.current.mytext;
+	    });
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div ng-app="demoApp" ng-controller="demoController">
+		<input type="button" value="show Hide" ng-click="showHide()"><br>
+		<div ng-show="IsVisible">angular</div>
+	</div>
+	<script type="text/javascript">
+		var app = angular.module("demoApp", []);
+		app.controller("demoController", function($scope) {
+			$scope.IsVisible = false;
+			$scope.showHide = function() {
+				 $scope.IsVisible = $scope.IsVisible = true;
+			}
+		})
+	</script>
+</body>
+</html>

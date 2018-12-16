@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div ng-app="demoApp" ng-controller="demoController">
+		 <input type="text" ng-model="nameModel"><br>
+		 this is lowercase {{nameModel | lowercase}} <br>
+		 <input type="text" ng-model="nameModel1"><br>
+		 this is uppercase {{nameModel1 | uppercase}}<br>
+		 <input type="text" ng-model="nameModel2"><br>
+		 this is number {{nameModel2 | number:2}}<br>
+		 <input type="text" ng-model="nameModel3"><br>
+		 this is currency  {{nameModel3 | currency}}<br>
+		 this is json  {{nameModel4 | json}}<br>
+	</div>
+	<script type="text/javascript">
+	var app = angular.module("demoApp", []);
+	app.controller("demoController", function($scope) {
+		$scope.nameModel = "LONGs";
+		$scope.nameModel1 ="vanS";
+		$scope.nameModel2 = 3.487754;
+		$scope.nameModel3 = 3.487754;
+		$scope.nameModel4 = {name: "long", age : 30};
+	})
+	</script>
+</body>
+</html>

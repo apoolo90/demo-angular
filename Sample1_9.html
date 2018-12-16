@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+</head>
+<body ng-app="DemoApp">
+	<div class="container">
+		<ul>
+			<li><a href="#!NewEvent"> Add New Event</a></li>
+			<li><a href="#!DisplayEvent"> Display Event</a></li>
+		</ul>
+		<div ng-view></div>
+	</div>
+
+	<script type="text/javascript">
+		var app = angular.module('DemoApp', [ "ngRoute" ]);
+		app.config(function($routeProvider) {
+			$routeProvider.when('/NewEvent', {
+				templateUrl : 'add_event.html',
+				controller : 'AddEventController'
+			}).when('/DisplayEvent', {
+				templateUrl : 'show_event.html',
+				controller : 'ShowDisplayController'
+			}).otherwise({
+				redirectTo : '/DisplayEvent'
+			})
+		});
+		app.controller('AddEventController', function($scope) {
+			$scope.message = "this is to add a new event";
+		});
+		app.controller('ShowDisplayController', function($scope) {
+			$scope.message = "this is to show event";
+		});
+	</script>
+</body>
+</html>

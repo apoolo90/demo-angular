@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/angular-route.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="lib/angular-resource.js"></script>
+<script type="text/javascript" src="lib/jcs-auto-validate.js"></script>
+<script type="text/javascript" src="lib/jcs-auto-validate.min.js"></script>
+</head>
+<body ng-app="DemoApp">
+	<div class="form-group">
+		<form name="myForm" novalidate="novalidate">
+			<div class="form-group">
+				enter your name : <input class="form-control" type="text" ng-model="user" required="required">
+			</div>
+			<div class="form-group">
+				<input type="submit">
+			</div>
+		</form>
+	</div>
+	<script type="text/javascript">
+		var app = angular.module("DemoApp", [ 'jcs-autoValidate' ]);
+	</script>
+</body>
+</html>

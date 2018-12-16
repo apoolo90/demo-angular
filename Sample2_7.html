@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+<script type="text/javascript" src="lib/angular.js"></script>
+<script type="text/javascript" src="lib/angular-route.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.js"></script>
+<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+	<div ng-app="demoApp" ng-init="mang=['long','van',4567]">
+	<ul>
+		<li ng-repeat="thanhphan in mang">{{thanhphan}}</li>
+	</ul>
+	</div>
+	<script type="text/javascript">
+	var app = angular.module("demoApp", []);
+	app.filter("Demofilter", function() {
+		return function(input) {
+			return input + " tutorial";
+		}
+	})
+	app.controller("demoController", function($scope) {
+		$scope.tutorial = "angular";
+	})
+	</script>
+</body>
+</html>
